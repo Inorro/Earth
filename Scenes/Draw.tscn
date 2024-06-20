@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg851kkjy2xmx"]
+
+[ext_resource type="Script" path="res://Draw.gd" id="1_6ytok"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gtrol"]
+
+[node name="Draw" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_6ytok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_gtrol")
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D"]
