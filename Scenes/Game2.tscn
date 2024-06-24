@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cc66eyvkxeitf"]
+[gd_scene load_steps=9 format=3 uid="uid://d4ibybap6qc7a"]
 
-[ext_resource type="PackedScene" uid="uid://yu73otkyg2yy" path="res://Scenes/Ball.tscn" id="2_j2wxj"]
-[ext_resource type="PackedScene" uid="uid://dg851kkjy2xmx" path="res://Scenes/Draw.tscn" id="2_p7b34"]
-[ext_resource type="PackedScene" uid="uid://bvbc2vt3obf0d" path="res://Scenes/end.tscn" id="3_m135n"]
-[ext_resource type="PackedScene" uid="uid://dut0dxj5riky4" path="res://Scenes/pause.tscn" id="4_i6rca"]
-[ext_resource type="PackedScene" uid="uid://5mfg14he54ai" path="res://Scenes/reset.tscn" id="5_7k5ku"]
+[ext_resource type="PackedScene" uid="uid://dg851kkjy2xmx" path="res://Scenes/Draw.tscn" id="1_jfclq"]
+[ext_resource type="PackedScene" uid="uid://yu73otkyg2yy" path="res://Scenes/Ball.tscn" id="2_mbp8l"]
+[ext_resource type="PackedScene" uid="uid://bvbc2vt3obf0d" path="res://Scenes/end.tscn" id="3_07t16"]
+[ext_resource type="PackedScene" uid="uid://q1uqh1xq1atn" path="res://Scenes/Obst.tscn" id="4_kqf5p"]
+[ext_resource type="PackedScene" uid="uid://5mfg14he54ai" path="res://Scenes/reset.tscn" id="5_qub6m"]
+[ext_resource type="PackedScene" uid="uid://dut0dxj5riky4" path="res://Scenes/pause.tscn" id="6_n85of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k586i"]
 size = Vector2(481.5, 343)
@@ -13,9 +14,9 @@ size = Vector2(481.5, 343)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Draw" parent="." instance=ExtResource("2_p7b34")]
+[node name="Draw" parent="." instance=ExtResource("1_jfclq")]
 
-[node name="RigidBody2D" parent="." instance=ExtResource("2_j2wxj")]
+[node name="RigidBody2D" parent="." instance=ExtResource("2_mbp8l")]
 position = Vector2(59, -255)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -46,9 +47,12 @@ position = Vector2(0, 0.75)
 scale = Vector2(481.5, 345.5)
 texture = SubResource("CanvasTexture_qqbuw")
 
-[node name="Area2D" parent="." instance=ExtResource("3_m135n")]
+[node name="Area2D" parent="." instance=ExtResource("3_07t16")]
 position = Vector2(1504, -334)
 
-[node name="Pause" parent="." instance=ExtResource("4_i6rca")]
+[node name="Obst1" parent="." instance=ExtResource("4_kqf5p")]
+position = Vector2(899, -195)
 
-[node name="Reset" parent="." instance=ExtResource("5_7k5ku")]
+[node name="Pause" parent="." instance=ExtResource("6_n85of")]
+
+[node name="Reset" parent="." instance=ExtResource("5_qub6m")]

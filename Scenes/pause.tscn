@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dut0dxj5riky4"]
+
+[ext_resource type="Script" path="res://Scripts/Pause.gd" id="1_wr24v"]
+
+[node name="Pause" type="Button"]
+offset_left = -3.0
+offset_top = -591.0
+offset_right = 164.0
+offset_bottom = -469.0
+text = "Pause"
+script = ExtResource("1_wr24v")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
