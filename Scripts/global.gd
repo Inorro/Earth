@@ -1,6 +1,7 @@
 extends Node
 
 var current_scene = null
+var seed = 0
 
 func _ready():
 	var root = get_tree().root
@@ -21,6 +22,8 @@ func goto_scene(path):
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene.
 	current_scene.free()
+	
+	seed += 1
 
 	# Load the new scene.
 	var s = ResourceLoader.load(path)
